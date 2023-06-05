@@ -1,6 +1,7 @@
 # Microsoft New Movie Studio
 
-<img src="images/movie_studio.jpeg" alt="Drawing" style="width: 900px;"/>
+<!-- <img src="images/movie_studio.jpeg" alt="Drawing" style="width: 900px;"/> -->
+![](images/movie_studio.jpeg)
 
 ## Overview
 
@@ -8,16 +9,18 @@ This notebook examines various movie databases that encompass data from thousand
 
 The analysis was centered on 3 main points:
 - genre
-- runtime and rating  
+- budget  
 - actors 
 
 By conducting a study of these data points, the aim is to provide valuable insights to help Microsoft's new movie studio focus on the main indicators of a movie's success.
 
-It was found that Action movies generated the highest profit from 2010 to 2018 with over $8 billion generated. 
+Action movies generated the highest profit from 2010 to 2018 with over $8 billion generated. Adventure and Comedy are the 2nd and 3rd most profitable genres. <br>Making a combination of these 3 genres is the first recommendation.
 
-No correlation was found between a movie's runtime and profit. In addition, most profitable movies tend to be much longer than the majority of movies so as long as a movie has the right recipe, runtime does not matter as much. <br>
-As for how long a movie should be: while movies tend to have a higher rating when on a shorter range, no correlation was found between a movie's runtime and profit. In addition, most profitable movies tend to be much longer than the majority of movies so as long as a movie has the right recipe, runtime does not matter as much. <br>
-Finally, some actors were identified as generating the most profit in recent years - and having them starring in an action movie would most likely contribute to higher results.
+Second, Comedy movies have a higher return on investment but generate less. Microsoft should make Comedy films at lower cost (median of \\$21 million budget) to generate profit and build resources to create less, but more profitable Action and Adventure movies - which require a median investment of \\$80 million. 
+A very high correlation was found between a movie's budget and its profit, so costs should not be saved there. 
+
+Finally, some actors were identified as generating the most profit in recent years - and having them starring in an action movie would most likely contribute to higher results. These include: Robert Downey Jr., Dwayne Johnson, Chris Evans.
+
 
 ## Business problem
 
@@ -51,7 +54,7 @@ The number of movies reduces drastically from the $500 million profit mark, maki
 With the key variable and threshold determined 3 main attributes of a movie are evaluated to understand how they relate to a movie's success. 
 
 1. Genre
-2. Runtime
+2. Budget
 3. Casting: actors and actresses
 
 To measure these, the sum of profit by genre was calculated using groupby. 
@@ -70,21 +73,22 @@ The number of movies reduces drastically from the $500 million profit mark, maki
 ### 1. Genre 
 * The first recommendation is to produce Action movies - which have generated the most profit from 2010 to 2018. This genre created 82 billion dollars profit over these years: 45 billion more than the second most profitable genre: Adventure. Comedy movies would come third recommendation for movies' genre to ensure reaching the highest profits rapidly. 
 
-<img src="images/profit_genres" alt="Drawing" style="width: 900px;"/>
+<!-- <img src="images/profit_genres" alt="Drawing" style="width: 900px;"/> -->
+![](images/profit_genres.jpeg)
 
 
 
-### 2. Runtime 
-* The second recommendation is to not fall into the trap of making a shorter movie to hope to reach a broader audience. No correlation was found between a movie's length in minutes and the profit it generated. While the median movie runs for 107 minutes, the most profitable ones have seen to be longer (140 minutes) or shorter (90 minutes), against initial expectations.
+### 2. Budget 
+* The second recommendation is to highly invest in movies that are made. Microsoft should make Comedy films at lower cost (median of \\$21 million budget) to build a higher budget fund. This fund should be used to create less, but more profitable Action and Adventure movies - which require a median investment of \\$80 million. 
 
-<img src="images/profit_runtime" alt="Drawing" style="width: 900px;"/>
+![](images/median_budget.jpeg)
 
 
 ### 3. Casting 
 
 * The last recommendation is to pick actors carefully. A list of actors became notably famous in their genre and are linked to higher profits generated. Actors such as Robert Downey Jr., Dwayne Johnson, Chris Evans have starred in the most profitable movies and became icons for the Action, Adventure and Comedy movies and are more likely to arouse interest for the movies they are part of. Care should be exercised to ensure these actors are associated with the genre they are famous for. 
-<img src="images/profit_actors" alt="Drawing" style="width: 900px;"/>
-
+<!-- <img src="images/profit_actors" alt="Drawing" style="width: 900px;"/> -->
+![](images/profit_actors.jpeg)
 
 #### Limitations 
 
@@ -99,9 +103,21 @@ Next steps would be to gather information on other sources of revenue from movie
 * product placement
 
 
-
 ## For More Information 
-See the full analysis and code in the [Jupyter Notebook](notebook.pdf) as well as summary in this [presentation](microsoft_movie_studio.pdf).
+See the full analysis and code in the [Jupyter Notebook](notebook.pdf) as well as summary in this [presentation](presentation.pdf).
 
 
 For additional info, contact [Albane Colmenares](mailto:albane.colmenares@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
+
+## Repository Structure
+```
+
+├── images
+├── .gitignore
+├── README.md
+├── microsoft-movie-analysis.ipynb
+├── presentation.pdf
+└── notebook.pdf
+
+```
+
